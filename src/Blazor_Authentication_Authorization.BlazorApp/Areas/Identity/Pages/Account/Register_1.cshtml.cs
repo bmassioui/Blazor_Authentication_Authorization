@@ -14,7 +14,7 @@ using System.Text.Encodings.Web;
 
 namespace Blazor_Authentication_Authorization.BlazorApp.Areas.Identity.Pages.Account
 {
-    public class RegisterModel : PageModel
+    public class RegisterModel_1 : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
@@ -23,7 +23,7 @@ namespace Blazor_Authentication_Authorization.BlazorApp.Areas.Identity.Pages.Acc
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
-        public RegisterModel(
+        public RegisterModel_1(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
