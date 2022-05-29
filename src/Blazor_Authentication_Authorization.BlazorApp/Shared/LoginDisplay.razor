@@ -1,4 +1,4 @@
-﻿<AuthorizeView>
+﻿@*<AuthorizeView>
     <Authorized>
         <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
         <form method="post" action="Identity/Account/LogOut">
@@ -8,5 +8,15 @@
     <NotAuthorized>
         <a href="Identity/Account/Register">Register</a>
         <a href="Identity/Account/Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>*@
+
+
+<AuthorizeView>
+    <Authorized>
+        <MudButton StartIcon="@Icons.Filled.AccountCircle" Color="Color.Inherit">@context.User.Identity?.Name</MudButton>
+    </Authorized>
+    <NotAuthorized>
+        <MudButton StartIcon="@Icons.Filled.AccountCircle" Color="Color.Inherit" @onclick="OnLogRegisterButton_Click">Login/Register</MudButton>
     </NotAuthorized>
 </AuthorizeView>
