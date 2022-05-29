@@ -10,8 +10,9 @@
     <MudAppBar Elevation="0" Class="mud-theme-primary">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Custom.Brands.MudBlazor" Color="Color.Inherit" Link="#" Target="_blank" />
-        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="#" Target="_blank" />
+        @*<MudIconButton Icon="@Icons.Filled.AccountCircle" Color="Color.Inherit" Link="#" Target="_blank"> Login/Register</MudIconButton>*@
+        <MudButton StartIcon="@Icons.Filled.AccountCircle" Color="Color.Inherit">Login/Register</MudButton>
+
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
         <MudDrawerHeader>
