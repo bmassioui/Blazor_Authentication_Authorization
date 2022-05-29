@@ -24,56 +24,7 @@
     <section class="d-flex align-items-center justify-content-center vh-100 h-100">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-md-9 col-lg-6 col-xl-5">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                         class="img-fluid" alt="Login Image">
-                </div>
-                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                    <form>
-                        <div class="d-flex flex-row justify-content-lg-start mb-2">
-                            <p class="lead mb-0 me-3 fw-bold">Sign In</p>
-                        </div>
-
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="emailInput">Email address</label>
-                            <input type="email" id="emailInput" class="form-control form-control-md"
-                                   placeholder="Enter a valid email address" />
-                        </div>
-
-                        <!-- Password input -->
-                        <div class="form-outline mb-3">
-                            <label class="form-label" for="passwordInput">Password</label>
-                            <input type="password" id="passwordInput" class="form-control form-control-md"
-                                   placeholder="Enter password" />
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <!-- Checkbox -->
-                            <div class="form-check mb-0">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                                <label class="form-check-label" for="form2Example3">
-                                    Remember me
-                                </label>
-                            </div>
-                            <a href="#!" class="text-body">Forgot password?</a>
-                        </div>
-
-                        <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="button" class="btn btn-primary btn-md"
-                                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
-                                Login
-                            </button>
-                            <p class="small fw-bold mt-2 pt-1 mb-0">
-                                Don't have an account? <a href="#!"
-                                                          class="link-danger">Register</a>
-                            </p>
-                        </div>
-
-                    </form>
-                </div>
-
-                @{
+@*                @{
                     var result = Engine.FindView(ViewContext, "_LoginPartial", isMainPage: false);
                 }
                 @if (result.Success)
@@ -85,7 +36,9 @@
                     throw new InvalidOperationException("The default Identity UI layout requires a partial view '_LoginPartial' " +
                     "usually located at '/Pages/_LoginPartial' or at '/Views/Shared/_LoginPartial' to work. Based on your configuration " +
                     $"we have looked at it in the following locations: {System.Environment.NewLine}{string.Join(System.Environment.NewLine, result.SearchedLocations)}.");
-                }
+                }*@
+
+                @RenderBody()
             </div>
         </div>
     </section>
